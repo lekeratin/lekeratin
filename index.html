@@ -12,7 +12,6 @@
 <meta name="keywords" content="кератин, кератиновое выпрямление, восстановление волос, биксипластия, ботокс для волос, Мурино, СПб, парикмахер Мурино, уход за волосами">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://lekeratin.com/">
-<meta name="msvalidate.01" content="155625985987774B87FB37B24D1D3EE5" />
 
 <!-- Open Graph (для красивых ссылок в Telegram, VK, WhatsApp) -->
 <meta property="og:type" content="website">
@@ -54,6 +53,9 @@
 
 <!-- ПОДТВЕРЖДЕНИЕ ЯНДЕКСА -->
 <meta name="yandex-verification" content="416c0c7a690f9dc6" />
+
+<!-- ПОДТВЕРЖДЕНИЕ BING -->
+<meta name="msvalidate.01" content="155625985987774B87FB37B24D1D3EE5" />
 
 <!-- ИКОНКА САЙТА (ФАВИКОН В ФОРМАТЕ SVG) -->
 <link rel="icon" type="image/svg+xml" href="favicon.svg?v=1">
@@ -359,6 +361,57 @@
   footer { text-align: center; padding: 60px 20px; font-size: 12px; color: var(--text-muted); letter-spacing: 0.1em; background: var(--bg); position: relative; z-index: 2; }
   footer img { height: 48px; margin-bottom: 24px; opacity: 0.8; }
 
+  /* ==========================================
+     СТИЛИ ДЛЯ ВСПЛЫВАЮЩЕГО ОКНА КУКИ
+     ========================================== */
+  .cookie-banner {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 40px);
+      max-width: 800px;
+      background-color: #fcf8f5;
+      border-radius: 20px;
+      padding: 20px 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 9999;
+      font-family: 'FixOne', 'Jost', sans-serif;
+      font-size: 14px;
+      color: #333;
+      gap: 20px;
+      box-sizing: border-box;
+  }
+  .cookie-text { line-height: 1.5; max-width: 600px; }
+  .cookie-text a { color: #333; text-decoration: underline; }
+  .cookie-buttons { display: flex; gap: 15px; flex-shrink: 0; }
+  .cookie-btn {
+      background: transparent;
+      border: 1px solid #333;
+      padding: 10px 25px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      font-family: 'FixOne', 'Jost', sans-serif;
+  }
+  .cookie-btn:hover { background: #333; color: #fff; }
+  @media (max-width: 768px) {
+      .cookie-banner {
+          flex-direction: column;
+          align-items: flex-start;
+          bottom: 10px;
+          padding: 15px;
+          width: calc(100% - 20px);
+      }
+      .cookie-buttons { width: 100%; justify-content: space-between; }
+  }
+
   @media (max-width: 992px) {
     .hero-grid, .about-me, .contacts-inner { grid-template-columns: 1fr; gap: 48px; }
     .hero { padding: 64px 0 80px; text-align: center; }
@@ -636,8 +689,9 @@
       <div class="price-row"><div class="name">До плеч</div><div class="value">6 500 ₽</div></div>
       <div class="price-row"><div class="name">Ниже плеч</div><div class="value">7 500 ₽</div></div>
       <div class="price-row"><div class="name">Ниже лопаток</div><div class="value">9 500 ₽</div></div>
-      <div class="price-row"><div class="name">Талия</div><div class="value">10 000 ₽</div></div>
-      <div class="price-row"><div class="name">Поясница</div><div class="value">10 500 ₽</div></div>
+      <div class="price-row"><div class="name">До талии</div><div class="value">10 000 ₽</div></div>
+      <div class="price-row"><div class="name">До поясницы</div><div class="value">10 500 ₽</div></div>
+      <div class="price-row"><div class="name">Ниже поясницы</div><div class="value">11 000 ₽</div></div>
 
       <h3 class="price-title">Холодное восстановление с усиленной реконструкцией "23/45"</h3>
       <div class="price-row"><div class="name">Комплексная процедура</div><div class="value">4 500 – 6 500 ₽</div></div>
@@ -687,8 +741,9 @@
             <option value="6500">Кератин (До плеч)</option>
             <option value="7500">Кератин (Ниже плеч)</option>
             <option value="9500">Кератин (Ниже лопаток)</option>
-            <option value="10000">Кератин (Талия)</option>
-            <option value="10500">Кератин (Поясница)</option>
+            <option value="10000">Кератин (До талии)</option>
+            <option value="10500">Кератин (До поясницы)</option>
+            <option value="11000">Кератин (Ниже поясницы)</option>
             <option value="4500">Холодное восстановление (23/45)</option>
           </select>
         </div>
@@ -838,16 +893,28 @@
       <div class="duration-table-wrap">
         <h3 class="duration-table-title">Ориентировочное время</h3>
         <div class="duration-row">
-          <div class="duration-name">Короткие (пикси, каре)</div>
+          <div class="duration-name">До плеч</div>
           <div class="duration-value">2–2,5 ч</div>
         </div>
         <div class="duration-row">
-          <div class="duration-name">Средние (до плеч)</div>
-          <div class="duration-value">3–3,5 ч</div>
+          <div class="duration-name">Ниже плеч</div>
+          <div class="duration-value">3 ч</div>
         </div>
         <div class="duration-row">
-          <div class="duration-name">Длинные / густые</div>
-          <div class="duration-value">4–6 ч <span class="duration-sub">(отдельная запись)</span></div>
+          <div class="duration-name">Ниже лопаток</div>
+          <div class="duration-value">3,5 ч</div>
+        </div>
+        <div class="duration-row">
+          <div class="duration-name">До талии</div>
+          <div class="duration-value">4 ч</div>
+        </div>
+        <div class="duration-row">
+          <div class="duration-name">До поясницы</div>
+          <div class="duration-value">5 ч</div>
+        </div>
+        <div class="duration-row">
+          <div class="duration-name">Ниже поясницы</div>
+          <div class="duration-value">6 ч <span class="duration-sub">(отдельная запись)</span></div>
         </div>
         <p class="duration-note">* Пористые волосы могут сохнуть дольше или требовать больше составов. Точное время скажу по фото перед записью.</p>
       </div>
@@ -1042,6 +1109,20 @@
   <p class="small" style="margin-top: 10px; font-size: 11px;">© 2026 LE'KERATIN. <a href="privacy.html" style="text-decoration: underline; color: var(--text-muted);">Политика конфиденциальности</a></p>
 </footer>
 
+<!-- ==========================================
+     HTML КОД БАННЕРА КУКИ
+     ========================================== -->
+<div id="cookie-banner" class="cookie-banner" style="display: none;">
+    <div class="cookie-text">
+        Мы используем cookie, Яндекс Метрику и Яндекс Карты, чтобы понимать, как работает сайт, и показывать карту. 
+        Подробнее — в <a href="consent.html">правилах cookie</a>.
+    </div>
+    <div class="cookie-buttons">
+        <button id="accept-cookies" class="cookie-btn">ПРИНЯТЬ</button>
+        <button id="decline-cookies" class="cookie-btn">ОТКЛОНИТЬ</button>
+    </div>
+</div>
+
 <!-- ============================================================
      СКРИПТЫ
      ============================================================ -->
@@ -1052,6 +1133,32 @@
     if (event.target.nodeName === 'IMG' || event.target.nodeName === 'VIDEO') {
       event.preventDefault();
     }
+  });
+
+  // ============================================================
+  // ЛОГИКА БАННЕРА КУКИ
+  // ============================================================
+  document.addEventListener("DOMContentLoaded", function() {
+      const cookieBanner = document.getElementById('cookie-banner');
+      const acceptBtn = document.getElementById('accept-cookies');
+      const declineBtn = document.getElementById('decline-cookies');
+
+      const cookieConsent = localStorage.getItem('cookieConsent');
+
+      if (!cookieConsent) {
+          cookieBanner.style.display = 'flex';
+      }
+
+      acceptBtn.addEventListener('click', function() {
+          localStorage.setItem('cookieConsent', 'accepted');
+          cookieBanner.style.display = 'none';
+          // Тут можно добавить инициализацию Яндекс.Метрики, если она отключена по умолчанию
+      });
+
+      declineBtn.addEventListener('click', function() {
+          localStorage.setItem('cookieConsent', 'declined');
+          cookieBanner.style.display = 'none';
+      });
   });
 
   // ============================================================
